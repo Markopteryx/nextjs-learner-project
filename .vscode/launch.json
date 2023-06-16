@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Server",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev"
+        },
+        {
+            "name": "Migrate DB",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npx prisma migrate dev --name init"
+        },
+        {
+            "name": "View DB",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npx prisma studio"
+        },
+        {
+            "name": "Create DB Docs",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npx prisma-docs-generator serve"
+        },
+    ]
+}
