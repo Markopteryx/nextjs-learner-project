@@ -28,7 +28,7 @@ export default function Home() {
               className={buttonVariants({
                 className: "w-full mt-4 mb-6",
               })}
-              href="/slice/create"
+              href="/s/create"
             >
               Create Slice
             </Link>

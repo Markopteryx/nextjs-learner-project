@@ -46,7 +46,7 @@ const Page = () => {
     onError: (error) => {
       if (error instanceof Error && error.message === "Conflict") {
         return toast({
-          title: "Subreddit already exists.",
+          title: "Slice already exists.",
           description: "Please choose a different name.",
           variant: "destructive",
         });
@@ -54,7 +54,7 @@ const Page = () => {
 
       if (error instanceof Error && error.message === "Invalid") {
         return toast({
-          title: "Subreddit name too short.",
+          title: "Slice name too short.",
           description: "Please choose a different name.",
           variant: "destructive",
         });
@@ -66,12 +66,12 @@ const Page = () => {
 
       toast({
         title: "There was an error.",
-        description: "Could not create subreddit.",
+        description: "Could not create slice.",
         variant: "destructive",
       });
     },
     onSuccess: (data) => {
-      router.push(`/r/${data}`);
+      router.push(`/s/${data}`);
     },
   });
 
@@ -92,7 +92,7 @@ const Page = () => {
 
           <div className="relative">
             <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400">
-              ~/
+              s/
             </p>
             <Input
               value={input}
