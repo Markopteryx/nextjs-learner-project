@@ -5,7 +5,7 @@ export const SliceValidator = z.object({
 });
 
 export const SliceSubscriptionValidator = z.object({
-  subredditId: z.string(),
+  sliceId: z.string(),
 });
 
 export type CreateSlicePayload = z.infer<typeof SliceValidator>;
